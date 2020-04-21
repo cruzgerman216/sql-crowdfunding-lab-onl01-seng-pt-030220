@@ -29,8 +29,8 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_summed_amount
-  "SELECTS users.name, sum(pledges.amount) AS get_amount from users 
-  INNER JOIN pledges 
+  "SELECTS users.name, sum(pledges.amount) AS get_amount from users
+  INNER JOIN pledges
   ON users.id = pledges.user_id
   GROUP BY get_AMOUNT"
 end
