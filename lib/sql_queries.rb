@@ -40,6 +40,7 @@ def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_ca
   "SELECT projects.category, sum(pledges.amount) as amount FROM projects
   INNER JOIN pledges
   ON projects.id = pledges.project_id
+  group by projects.category
   ORDER BY amount"
 end
 
